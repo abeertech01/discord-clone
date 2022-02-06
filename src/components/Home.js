@@ -12,6 +12,7 @@ import { auth, db } from "../firebase";
 import Channel from "./Channel";
 import ServerIcon from "./ServerIcon";
 import { useCollection } from "react-firebase-hooks/firestore";
+import Chat from "./Chat";
 
 const Home = () => {
   const [user] = useAuthState(auth);
@@ -96,6 +97,9 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="bg-discord_chatBg flex-grow">
+          <Chat />
         </div>
       </div>
     </>
